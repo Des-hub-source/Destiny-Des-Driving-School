@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destiny Des Driving School | We Drive You to Your Destiny</title>
+  <meta name="description" content="Professional driving lessons with Destiny Des Driving School. Learn with confidence, build safe driving habits and get ready for the road.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#06142d;--blue:#1769e8;--light:#f4f7fc;--ink:#101828;--muted:#667085;--white:#fff;--line:#e4eaf2}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(6,20,45,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800}
+    .brand img{width:54px;height:54px;object-fit:contain}
+    .brand span{font-family:Montserrat;font-size:15px;line-height:1.1}
+    .menu{display:flex;align-items:center;gap:25px;color:#dbe7ff;font-size:14px;font-weight:600}
+    .menu a:hover{color:#fff}
+    .nav-cta{padding:11px 17px;border-radius:999px;background:var(--blue);color:#fff!important}
+    .hamb{display:none;color:#fff;background:none;border:0;font-size:28px}
+    .hero{background:radial-gradient(circle at 75% 30%,#153b7a 0,#0a2047 35%,#06142d 72%);color:#fff;padding:90px 0 80px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:60px}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;color:#a9c9ff;background:rgba(23,105,232,.14);border:1px solid rgba(100,160,255,.3);padding:7px 12px;border-radius:999px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+    h1{font-family:Montserrat;font-size:clamp(42px,6vw,72px);line-height:1.02;margin:20px 0}
+    h1 span{color:#4c93ff}
+    .hero p{font-size:18px;color:#d7e2f6;max-width:620px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:10px;font-weight:800;border:1px solid transparent;transition:.2s}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 12px 28px rgba(23,105,232,.3)}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-ghost{border-color:#4c6385;color:#fff;background:rgba(255,255,255,.04)}
+    .hero-logo{display:flex;justify-content:center;align-items:center}
+    .hero-logo img{width:min(440px,90%);filter:drop-shadow(0 25px 40px rgba(0,0,0,.4))}
+    .trust{background:#fff;box-shadow:0 10px 30px rgba(16,24,40,.08);position:relative;margin-top:-35px;border-radius:18px;padding:25px}
+    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .trust-item{display:flex;gap:13px;align-items:center;padding:8px 15px}
+    .icon{width:44px;height:44px;display:grid;place-items:center;background:#eaf2ff;border-radius:12px;color:var(--blue);font-size:20px}
+    .trust strong{display:block;font-size:15px}.trust small{color:var(--muted)}
+    section{padding:90px 0}
+    .section-head{max-width:700px;margin-bottom:45px}
+    .section-head.center{text-align:center;margin-left:auto;margin-right:auto}
+    .kicker{color:var(--blue);font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:1.5px}
+    h2{font-family:Montserrat;font-size:clamp(30px,4vw,46px);line-height:1.1;margin:10px 0 15px}
+    .lead{color:var(--muted);font-size:17px}
+    .about{background:var(--light)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-card{background:var(--navy);border-radius:24px;padding:42px;color:#fff;min-height:370px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;position:relative}
+    .about-card:before{content:"";position:absolute;width:260px;height:260px;border:50px solid rgba(23,105,232,.35);border-radius:50%;top:-90px;right:-80px}
+    .about-card h3{font-family:Montserrat;font-size:30px;position:relative}
+    .about-card p{color:#c8d6ec;position:relative;margin-top:10px}
+    .checks{display:grid;gap:14px;margin-top:25px}
+    .check{display:flex;gap:10px;align-items:flex-start}
+    .check b{color:var(--blue)}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{border:1px solid var(--line);border-radius:18px;padding:28px;background:#fff;transition:.2s}
+    .card:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(16,24,40,.08)}
+    .card .bigicon{font-size:30px;margin-bottom:18px}
+    .card h3{font-family:Montserrat;font-size:20px;margin-bottom:8px}
+    .card p{color:var(--muted);font-size:14px}
+    .pricing{background:var(--light)}
+    .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .price-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;position:relative}
+    .price-card.featured{border:2px solid var(--blue);box-shadow:0 16px 40px rgba(23,105,232,.12)}
+    .badge{position:absolute;right:18px;top:18px;background:#eaf2ff;color:var(--blue);padding:6px 10px;border-radius:999px;font-size:11px;font-weight:900}
+    .price-card h3{font-family:Montserrat}
+    .price{font-size:34px;font-weight:900;margin:15px 0}.price small{font-size:13px;color:var(--muted);font-weight:500}
+    .price-card ul{list-style:none;display:grid;gap:10px;color:var(--muted);font-size:14px;margin:20px 0 25px}
+    .price-card li:before{content:"✓";color:var(--blue);font-weight:900;margin-right:8px}
+    .full{width:100%}
+    .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .why{padding:25px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+    .why h3{font-size:17px;margin:12px 0 6px}.why p{font-size:13px;color:var(--muted)}
+    .promo{background:linear-gradient(120deg,#0a1e43,#145fd0);color:#fff}
+    .promo-grid{display:grid;grid-template-columns:1fr auto;align-items:center;gap:35px}
+    .promo h2{margin-bottom:10px}.promo p{color:#d7e7ff}
+    .students{background:var(--light)}
+    .success-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .quote{background:#fff;border-radius:18px;padding:30px;border:1px solid var(--line)}
+    .quote p{font-size:17px;font-weight:600}.quote small{display:block;color:var(--muted);margin-top:15px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px}
+    .contact-box{background:var(--navy);color:#fff;border-radius:22px;padding:40px}
+    .contact-box p{color:#c8d6ec;margin:10px 0 25px}
+    .contact-links{display:grid;gap:12px}
+    .contact-link{padding:14px 16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+    form{display:grid;gap:14px}
+    input,textarea,select{width:100%;padding:14px 15px;border:1px solid var(--line);border-radius:10px;font:inherit;outline:none}
+    input:focus,textarea:focus,select:focus{border-color:var(--blue)}
+    textarea{min-height:120px;resize:vertical}
+    footer{background:#030c1d;color:#aebbd0;padding:35px 0}
+    .footer-grid{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .footer-brand{color:#fff;font-weight:800}
+    .float-wa{position:fixed;right:20px;bottom:20px;background:#1faa59;color:#fff;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:25px;box-shadow:0 12px 30px rgba(0,0,0,.25);z-index:60}
+    @media(max-width:850px){
+      .menu{display:none}.hamb{display:block}.hero-grid,.about-grid,.contact-grid,.success-grid{grid-template-columns:1fr}.hero{padding-top:60px}.hero-logo{order:-1}.trust-grid{grid-template-columns:1fr}.services-grid,.price-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr 1fr}.promo-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:520px){section{padding:65px 0}.why-grid{grid-template-columns:1fr}.brand span{font-size:12px}.brand img{width:46px;height:46px}.hero p{font-size:16px}.actions .btn{width:100%}.footer-grid{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#home"><img src="logo.png" alt="Destiny Des Driving School logo"><span>DESTINY DES<br>DRIVING SCHOOL</span></a>
+      <div class="menu">
+        <a href="#about">About</a><a href="#services">Lessons</a><a href="#pricing">Pricing</a><a href="#why">Why Us</a><a href="#contact">Contact</a>
+        <a class="nav-cta" href="#contact">Book a Lesson</a>
+      </div>
+      <button class="hamb" aria-label="Open menu" onclick="document.querySelector('.menu').classList.toggle('mobile-open')">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Professional Driving Lessons</span>
+      <h1>We Drive You to Your <span>Destiny.</span></h1>
+      <p>Build confidence behind the wheel, learn safe driving habits and prepare yourself for the road with patient, practical driving instruction.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">📅 Book Your Lesson</a>
+        <a class="btn btn-ghost" href="#services">Explore Our Lessons</a>
+      </div>
+    </div>
+    <div class="hero-logo"><img src="logo.png" alt="Destiny Des Driving School"></div>
+  </div>
+</section>
+
+<div class="container trust">
+  <div class="trust-grid">
+    <div class="trust-item"><div class="icon">🚗</div><div><strong>Practical Training</strong><small>Learn through real driving experience.</small></div></div>
+    <div class="trust-item"><div class="icon">🛡️</div><div><strong>Safety First</strong><small>Build habits that last beyond your test.</small></div></div>
+    <div class="trust-item"><div class="icon">🎯</div><div><strong>Goal Focused</strong><small>Training designed around your progress.</small></div></div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-card"><h3>Your journey starts here.</h3><p>At Destiny Des Driving School, our goal is simple: help learners become confident, responsible and capable drivers.</p></div>
+    <div>
+      <span class="kicker">About Destiny Des</span><h2>More than passing a test.</h2>
+      <p class="lead">We believe learning to drive is about developing the skills and confidence to handle real roads safely and responsibly.</p>
+      <div class="checks">
+        <div class="check"><b>✓</b><span>Patient guidance for learners at different experience levels.</span></div>
+        <div class="check"><b>✓</b><span>Practical focus on control, observation and road awareness.</span></div>
+        <div class="check"><b>✓</b><span>Supportive lessons that help you understand your mistakes and improve.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head center"><span class="kicker">Our Lessons</span><h2>Learn the skills you need for the road.</h2><p class="lead">From your first time behind the wheel to test preparation, we help you progress step by step.</p></div>
+    <div class="services-grid">
+      <div class="card"><div class="bigicon">🚘</div><h3>Beginner Lessons</h3><p>Start from the basics and build confidence with steering, pedals, gears and vehicle control.</p></div>
+      <div class="card"><div class="bigicon">🅿️</div><h3>Parking & Manoeuvres</h3><p>Improve your parking, reversing, turning and vehicle positioning with practical guidance.</p></div>
+      <div class="card"><div class="bigicon">🛣️</div><h3>Road Driving</h3><p>Develop observation, judgement, lane discipline and confidence in everyday traffic.</p></div>
+      <div class="card"><div class="bigicon">🎓</div><h3>Test Preparation</h3><p>Prepare for your driving test by practising the skills and routines you need to perform confidently.</p></div>
+      <div class="card"><div class="bigicon">🔄</div><h3>Refresher Lessons</h3><p>Already have a licence but need more confidence? Refresh your skills with focused lessons.</p></div>
+      <div class="card"><div class="bigicon">📈</div><h3>Progress-Based Training</h3><p>Focus on the areas you need most, with lessons adapted to your current ability.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-head center"><span class="kicker">Packages</span><h2>Choose the training that fits your journey.</h2><p class="lead">Prices can be updated as your packages change. Contact us for the latest availability and booking details.</p></div>
+    <div class="price-grid">
+      <div class="price-card"><h3>Driving Lessons</h3><div class="price">Contact us</div><ul><li>Practical driving instruction</li><li>Personalised guidance</li><li>Progress-focused training</li></ul><a class="btn btn-primary full" href="#contact">Enquire Now</a></div>
+      <div class="price-card featured"><span class="badge">POPULAR</span><h3>Test Preparation</h3><div class="price">Contact us</div><ul><li>Test-focused practice</li><li>Manoeuvre preparation</li><li>Confidence building</li></ul><a class="btn btn-primary full" href="#contact">Book Preparation</a></div>
+      <div class="price-card"><h3>Custom Package</h3><div class="price">Let's talk</div><ul><li>Lessons based on your needs</li><li>Flexible training approach</li><li>Ask about current specials</li></ul><a class="btn btn-primary full" href="#contact">Get a Quote</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="container">
+    <div class="section-head center"><span class="kicker">Why Choose Us</span><h2>Training with purpose. Driving with confidence.</h2></div>
+    <div class="why-grid">
+      <div class="why"><div class="bigicon">🤝</div><h3>Patient Coaching</h3><p>We understand that every learner progresses differently.</p></div>
+      <div class="why"><div class="bigicon">🧠</div><h3>Learn the Why</h3><p>Understand the reason behind good driving habits—not just memorise them.</p></div>
+      <div class="why"><div class="bigicon">🎯</div><h3>Focused Progress</h3><p>Work on your weak areas and turn them into strengths.</p></div>
+      <div class="why"><div class="bigicon">💙</div><h3>Supportive Experience</h3><p>Our aim is to make your journey to confident driving a positive one.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="promo">
+  <div class="container promo-grid">
+    <div><span class="kicker" style="color:#b9d4ff">Limited Specials</span><h2>Ready to start your driving journey?</h2><p>Ask us about our latest driving-school specials and package offers.</p></div>
+    <a class="btn btn-primary" href="#contact">Ask About Specials</a>
+  </div>
+</section>
+
+<section class="students">
+  <div class="container">
+    <div class="section-head center"><span class="kicker">Student Success</span><h2>Every learner has a journey.</h2><p class="lead">This section can grow with your business as you add student testimonials, photos and success stories.</p></div>
+    <div class="success-grid">
+      <div class="quote"><p>“I finally feel more confident behind the wheel and understand what I need to improve.”</p><small>— Student testimonial placeholder</small></div>
+      <div class="quote"><p>“The lessons helped me understand the road instead of just preparing for a test.”</p><small>— Student testimonial placeholder</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact-grid">
+    <div>
+      <span class="kicker">Contact Us</span><h2>Let's get you on the road.</h2><p class="lead">Send us a message to ask about lessons, prices, availability or current promotions.</p>
+      <div class="contact-box" style="margin-top:25px">
+        <h3>Destiny Des Driving School</h3><p>We Drive You to Your Destiny.</p>
+        <div class="contact-links">
+          <a class="contact-link" href="tel:+26776563310">📞 Call: 76563310</a>
+          <a class="contact-link" href="https://wa.me/267748117112">💬 WhatsApp: +267 748117112</a>
+          <a class="contact-link" href="#contact">📍 Serving learners in Botswana</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <form onsubmit="sendWhatsApp(event)">
+        <input id="name" required placeholder="Your name">
+        <input id="phone" required placeholder="Your phone number">
+        <select id="service"><option>Driving Lessons</option><option>Test Preparation</option><option>Refresher Lessons</option><option>Custom Package</option></select>
+        <textarea id="message" placeholder="Tell us what you need..."></textarea>
+        <button class="btn btn-primary" type="submit">Send Booking Enquiry via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<a class="float-wa" href="https://wa.me/267748117112" aria-label="Chat on WhatsApp">✆</a>
+
+<footer>
+  <div class="container footer-grid">
+    <div><div class="footer-brand">DESTINY DES DRIVING SCHOOL</div><small>We Drive You to Your Destiny.</small></div>
+    <small>© <span id="year"></span> Destiny Des Driving School. All rights reserved.</small>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+function sendWhatsApp(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value;
+  const phone=document.getElementById('phone').value;
+  const service=document.getElementById('service').value;
+  const message=document.getElementById('message').value;
+  const text=`Hello Destiny Des Driving School!%0A%0AMy name is ${encodeURIComponent(name)}.%0APhone: ${encodeURIComponent(phone)}%0AI am interested in: ${encodeURIComponent(service)}.%0A${encodeURIComponent(message)}`;
+  window.open(`https://wa.me/267748117112?text=${text}`,'_blank');
+}
+</script>
+</body>
+</html>
